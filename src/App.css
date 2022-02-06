@@ -52,7 +52,7 @@
 }
 
 .searchButton {
-  width: 100px;
+  width: 80px;
   height: 36px;
   border: 1px solid #00b4cc;
   background: #00b4cc;
@@ -61,4 +61,9 @@
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
+}
+
+.kk {
+  display: flex;
+  justify-content: center;
 }
