@@ -30,9 +30,7 @@ function App() {
             style={{ width: "100%" }}
           />
           <div className="container">
-            <h2 className="kk">
-              React Weather Application
-            </h2>
+            <h2 className="kk">React Weather Application</h2>
             <h3 className="kk">Find Weather Of Your City</h3>
 
             <div className="wrap">
@@ -54,19 +52,18 @@ function App() {
                     Search
                   </button>
                 </form>
-                <div>
-                  {/* {JSON.stringify(weathers)} */}
-              
-                </div>
+                <div>{/* {JSON.stringify(weathers)} */}</div>
               </div>
             </div>
           </div>
-          <h3 className="kk">Temperature: {weathers.main.temp}</h3>
-          <h3 className="kk">Country Name: {weathers.sys.country}</h3>
-          <h3 className="kk">Wind Speed: {weathers.wind.speed} Km/hour</h3>
-          <p></p>
+          {weathers && (
+            <>
+              <h3 className="kk">Temperature: {weathers.main && weathers.main.temp}</h3>
+              <h3 className="kk">Country Name: {weathers.sys && weathers.sys.country}</h3>
+              <h3 className="kk">Wind Speed: {weathers.wind && weathers.wind.speed} Km/hour</h3>
+            </>
+          )}
         </div>
-     
       </div>
       {/* <Weather /> */}
     </>
